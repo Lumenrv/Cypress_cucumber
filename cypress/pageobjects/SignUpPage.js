@@ -22,8 +22,7 @@ class SignUpPage {
         return cy.get('[fill="white"]').first()
     }
     errorMessage(){
-        return cy.get('h1')
-        // return cy.get('[id="email_error"]')
+        return cy.get('[id="email_error"]')
     }
     createAccountBtn(){
         return cy.get('[type="submit"]').first()

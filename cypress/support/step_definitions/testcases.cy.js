@@ -92,11 +92,11 @@ Then('I enter valid credentials to sign up fields', async () => {
 
 Then('I click "Create Account" button', async () => {
   signUpPage.createAccountBtn().click();
-  cy.wait(35000);
+  cy.wait(5000);
 });
 
-Then('I see succsesfull registration message', async () => {
-  signUpPage.errorMessage().contains("sent you an email to activate your account");
+Then('I see the captcha error', async () => {
+  signUpPage.errorMessage().contains("reCAPTCHA");
 });
 
 //Scenario#5
@@ -130,7 +130,7 @@ Then('I enter invalid password', async () => {
 
 Then('I click "Submit" button on Login page', async () => {
   loginPage.SubmitBtn().click();
-  cy.wait(3000);
+  cy.wait(10000);
 });
 
 Then('I see error message', async () => {

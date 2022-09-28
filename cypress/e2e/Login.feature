@@ -1,4 +1,4 @@
-Feature: Test of the Join the Waitlist Feature
+Feature: Test of Login page
      
 
    Scenario: Test login with an invalid password

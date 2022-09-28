@@ -16,6 +16,7 @@ Dependencies:
 - [cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor)
 - [multiple-cucumber-html-reporter](https://www.npmjs.com/package/multiple-cucumber-html-reporter)
 - [@cypress/browserify-preprocessor](https://www.npmjs.com/package/@cypress/browserify-preprocessor)
+- [cypress-xpath](https://www.npmjs.com/package/cypress-xpath)
 
 
 You need to add following to package.json
@@ -79,6 +80,3 @@ Also we can generate reports
 ``` console 
 npm run cypress:report
 ```
-You must have these result:
-![](https://diankavoy19.github.io/TestRail-Homework/picture/Report.png)
-![](https://diankavoy19.github.io/TestRail-Homework/picture/Report1.png)

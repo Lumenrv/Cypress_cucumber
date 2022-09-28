@@ -22,7 +22,7 @@ class SignUpPage {
         return cy.get('[fill="white"]').first()
     }
     errorMessage(){
-        return cy.get('[id="email_error"]')
+        return cy.get('[aria-label="signup-form_error"]')
     }
     createAccountBtn(){
         return cy.get('[type="submit"]').first()

@@ -130,7 +130,7 @@ Then('I enter invalid password', async () => {
 
 Then('I click "Submit" button on Login page', async () => {
   loginPage.SubmitBtn().click();
-  cy.wait(10000);
+  cy.wait(13000);
 });
 
 Then('I see error message', async () => {

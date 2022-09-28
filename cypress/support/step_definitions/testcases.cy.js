@@ -92,7 +92,7 @@ Then('I enter valid credentials to sign up fields', async () => {
 
 Then('I click "Create Account" button', async () => {
   signUpPage.createAccountBtn().click();
-  cy.wait(20000);
+  cy.wait(35000);
 });
 
 Then('I see succsesfull registration message', async () => {
@@ -130,6 +130,7 @@ Then('I enter invalid password', async () => {
 
 Then('I click "Submit" button on Login page', async () => {
   loginPage.SubmitBtn().click();
+  cy.wait(3000);
 });
 
 Then('I see error message', async () => {

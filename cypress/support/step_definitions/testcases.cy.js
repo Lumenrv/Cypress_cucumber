@@ -1,4 +1,4 @@
-import {  Given, When, Then, And } from "@badeball/cypress-cucumber-preprocessor";
+import {  Given, When, Then  } from "@badeball/cypress-cucumber-preprocessor";
 import SignUpPage from "../../pageobjects/SignUpPage"
 import JoinTheWaitlistPage from "../../pageobjects/JoinTheWaitlistPage";
 import LoginPage from "../../pageobjects/LoginPage";
@@ -34,7 +34,7 @@ When('I type random email into the email input in Try for free form', async () =
   cy.get(emailInput).type(randomEmail);
 });
 
-And('I click on "Try for free" button', async () => {
+Then('I click on "Try for free" button', async () => {
   cy.get(submitBtn).click();
 });
 
@@ -49,12 +49,12 @@ When('I click on the Join the Waitlist button', async () => {
     cy.wait(1000);
 });
 
-And('I follow the next page', async () => {
+Then('I follow the next page', async () => {
   joinTheWaitlistPage.JoinTheWaitlistBtn2().click();
     cy.wait(2000);
 });
 
-And('I enter valid data to the form', async () => {
+Then('I enter valid data to the form', async () => {
   joinTheWaitlistPage
       .nameInput()
       .type(joinTheWaitlistPage.randomNameGenerator());
@@ -69,7 +69,7 @@ And('I enter valid data to the form', async () => {
       .type("Hello every one, it's test message, thanks!");
 });
 
-And('I click "Submit" button', async () => {
+Then('I click "Submit" button', async () => {
   joinTheWaitlistPage.submitBtn().click();
 });
 
@@ -83,14 +83,14 @@ When('I open signUp page', () => {
   signUpPage.openSignUpPage();
 });
 
-And('I enter valid credentials to sign up fields', async () => {
+Then('I enter valid credentials to sign up fields', async () => {
   signUpPage.emailInput().type(signUpPage.randomEmailGenerator());
   signUpPage.passwordInput().type(signUpPage.randomPasswordGenerator(12));
   signUpPage.nameInput().type(signUpPage.randomNameGenerator());
   signUpPage.checkBox().click();
 });
 
-And('I click "Create Account" button', async () => {
+Then('I click "Create Account" button', async () => {
   signUpPage.createAccountBtn().click();
   cy.wait(20000);
 });
@@ -100,11 +100,11 @@ Then('I see succsesfull registration message', async () => {
 });
 
 //Scenario#5
-And('I enter invalid email on signUp page', async () => {
+Then('I enter invalid email on signUp page', async () => {
   signUpPage.emailInput().type(signUpPage.invalidEmail());
 });
 
-And('I click on the name input', async () => {
+Then('I click on the name input', async () => {
   signUpPage.nameInput().click();
 });
 
@@ -120,15 +120,15 @@ When('I open the Login page', () => {
   loginPage.openLoginPage();
 });
 
-And('I enter valid email', async () => {
+Then('I enter valid email', async () => {
   loginPage.emailInput().type(loginPage.exisstingUserEmail());
 });
 
-And('I enter invalid password', async () => {
+Then('I enter invalid password', async () => {
   loginPage.passwordInput().type(loginPage.randomPasswordGenerator());
 });
 
-And('I click "Submit" button on Login page', async () => {
+Then('I click "Submit" button on Login page', async () => {
   loginPage.SubmitBtn().click();
 });
 
@@ -140,22 +140,22 @@ Then('I see error message', async () => {
 
 //Scenario#7
 
-And('I enter invalid email', async () => {
+Then('I enter invalid email', async () => {
   loginPage.emailInput().type(loginPage.randomEmailGenerator());
 });
 
-And('I enter valid password', async () => {
+Then('I enter valid password', async () => {
   loginPage.passwordInput().type(loginPage.exisstingUserPassword());
 });
 
 //Scenario#8
 
-And('I enter blocked account email', async () => {
+Then('I enter blocked account email', async () => {
   loginPage.emailInput().type("sokesi7058@lurenwu.com");
 
 });
 
-And('I enter blocked account password', async () => {
+Then('I enter blocked account password', async () => {
   loginPage.passwordInput().type("CyppressTestSt1234@");
 });
 
@@ -165,15 +165,15 @@ Then('I see that account is blocked message', async () => {
 
 //Scenario#9
 
-And('I click on Signle Sign In button', async () => {
+Then('I click on Signle Sign In button', async () => {
   loginPage.singleSignInBtn().click();
 });
 
-And('I click "Submit" button on SignleSignIn page', async () => {
+Then('I click "Submit" button on SignleSignIn page', async () => {
   loginPage.SubmitSignleBtn().click();
 });
 
-And('I enter blocked account into email input', async () => {
+Then('I enter blocked account into email input', async () => {
   loginPage.emailInputSignle().type("sokesi7058@lurenwu.com");
 });
 
@@ -185,16 +185,16 @@ Then('I see that account isnt valid for this option', async () => {
 });
 
 //Scenario#10
-And('I click on forgot password button', async () => {
+Then('I click on forgot password button', async () => {
   loginPage.forgotPasswordBtn().click();
 });
 
-And('I enter random email', async () => {
+Then('I enter random email', async () => {
   loginPage.emailInput().type(loginPage.randomEmailGenerator());
 
 });
 
-And('I click "Reset Password" button', async () => {
+Then('I click "Reset Password" button', async () => {
   loginPage.resetPasswordBtn().click();
 });
 

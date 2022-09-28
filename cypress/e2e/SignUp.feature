@@ -5,7 +5,7 @@ Feature: Test of the SignUp page
      When I open signUp page
      And I enter valid credentials to sign up fields
      And I click "Create Account" button
-     Then I see the error captcha message
+     Then I see succsesfull registration message
 
      Scenario: Test sign Up with incorrect email
      When I open signUp page

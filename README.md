@@ -7,7 +7,7 @@ Before using cypress with cucumber, you need to install [node.js](https://nodejs
 
 Download git repository 
 ``` console
-git clone https://github.com/Diankavoy19/Cypress-cucumber
+git clone https://github.com/Lumenrv/Cypress_cucumber
 ```
 and use install node modules.
 

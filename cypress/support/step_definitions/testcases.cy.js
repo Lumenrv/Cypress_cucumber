@@ -1,14 +1,14 @@
 import {  Given, When, Then, And } from "@badeball/cypress-cucumber-preprocessor";
-import SignUpPage from "../../../pageobjects/SignUpPage"
-import JoinTheWaitlistPage from "../../../pageobjects/JoinTheWaitlistPage";
-import LoginPage from "../../../pageobjects/LoginPage";
+import SignUpPage from "../../pageobjects/SignUpPage"
+import JoinTheWaitlistPage from "../../pageobjects/JoinTheWaitlistPage";
+import LoginPage from "../../pageobjects/LoginPage";
 const loginPage = new LoginPage();
 const joinTheWaitlistPage = new JoinTheWaitlistPage();
 const signUpPage = new SignUpPage();
 const randomEmail = signUpPage.randomEmailGenerator();
 const emailInput = '[type="email"]';
 const submitBtn = '[type="submit"]';
-const base = require("../../../pageobjects/Base");
+const base = require("../../pageobjects/Base");
 const productPage = "https://telnyx.com/products";
 const productsList = "h2";
 
@@ -92,10 +92,10 @@ And('I enter valid credentials to sign up fields', async () => {
 
 And('I click "Create Account" button', async () => {
   signUpPage.createAccountBtn().click();
-  cy.wait(12000);
+  cy.wait(20000);
 });
 
-Then('I see the error captcha message', async () => {
+Then('I see succsesfull registration message', async () => {
   signUpPage.errorMessage().contains("sent you an email to activate your account");
 });
 

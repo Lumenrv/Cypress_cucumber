@@ -13,6 +13,8 @@ async function setupNodeEvents(on, config) {
 
 module.exports = defineConfig({
   e2e: {
+    viewportHeight: 1080,
+    viewportWidth: 1920,
     specPattern: "**/*.feature",
     supportFile: false,
     setupNodeEvents,

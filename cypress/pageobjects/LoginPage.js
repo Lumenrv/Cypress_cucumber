@@ -17,7 +17,7 @@ class LoginPage {
     return cy.get('[href="/#/login/password-reset"]');
   }
   SubmitBtn() {
-    return cy.xpath('//*[contains(@class,"LoginButton")]').first();
+    return cy.get('form[aria-label="loginForm"] > button')
   }
   errorMessage() {
     return cy.get('[data-testid="login.signin.message"]');

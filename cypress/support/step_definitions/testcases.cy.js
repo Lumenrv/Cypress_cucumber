@@ -46,12 +46,12 @@ Then('I see that my email is already entered on the new page', async () => {
 
 When('I click on the Join the Waitlist button', async () => {
   joinTheWaitlistPage.JoinTheWaitlistBtn().click();
-    cy.wait(1000);
+    cy.wait(3000);
 });
 
 Then('I follow the next page', async () => {
   joinTheWaitlistPage.JoinTheWaitlistBtn2().click();
-    cy.wait(2000);
+    cy.wait(10000);
 });
 
 Then('I enter valid data to the form', async () => {
